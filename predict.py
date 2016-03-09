@@ -11,7 +11,7 @@ def get_data(filename):
 		csvFileReader = csv.reader(csvfile)
 		next(csvFileReader) #skipping column names
 		for row in csvFileReader:
-			dates.append(int(row[0]))
+			dates.append(int(row[0].split('-')[0]))
 			prices.append(float(row[1]))
 	return
 
@@ -33,7 +33,7 @@ def predict_price(dates,prices,x):
 	predicted_price =linear_mod.predict(x)
 	return predicted_price[0][0],linear_mod.coef_[0][0] ,linear_mod.intercept_[0]
 
-get_data('google.csv') # calling get_data method by passing the csv file to it
+get_data('goog.csv') # calling get_data method by passing the csv file to it
 print dates
 print prices
 print "\n"
