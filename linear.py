@@ -30,7 +30,7 @@ def predict_price(dates, prices, x):
 	plt.legend()
 	plt.show()
 	
-	return linear_model.predict(x)[0][0], linear_mod.coef_[0][0], linear_mod.intercept_[0]
+	return linear_mod.predict(x)[0][0], linear_mod.coef_[0][0], linear_mod.intercept_[0]
 
 get_data('goog.csv') # calling get_data method by passing the csv file to it
 print "Dates- ", dates
