@@ -1,5 +1,5 @@
 # Regression-Stock-Prediction
-Predicting Google’s stock price using various regression techniques. Learning how to combine numpy, scikit-learn and matplotlib.
+Predicting Google’s stock price using various regression techniques. Learning how to combine numpy, scikit-learn and matplotlib. Work to do.
 
 Based on this tutorial- http://beancoder.com/linear-regression-stock-prediction/
 
