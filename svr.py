@@ -38,12 +38,12 @@ def predict_price(dates, prices, x):
 	return svr_rbf.predict(x)[0], svr_lin.predict(x)[0], svr_poly.predict(x)[0]
 
 get_data('goog.csv') # calling get_data method by passing the csv file to it
-print "Dates- ", dates
-print "Prices- ", prices
+print("Dates- ", dates)
+print("Prices- ", prices)
 
 predicted_price = predict_price(dates, prices, 29)  
-print "\nThe stock open price for 29th Feb is:"
-print "RBF kernel: $", str(predicted_price[0])
-print "Linear kernel: $", str(predicted_price[1])
-print "Polynomial kernel: $", str(predicted_price[2])
+print("\nThe stock open price for 29th Feb is:")
+print("RBF kernel: $", str(predicted_price[0]))
+print("Linear kernel: $", str(predicted_price[1]))
+print("Polynomial kernel: $", str(predicted_price[2]))
 	 
