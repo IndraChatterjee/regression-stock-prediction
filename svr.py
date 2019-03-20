@@ -35,7 +35,7 @@ def predict_price(dates, prices, x):
 	plt.legend()
 	plt.show()
 
-	return svr_rbf.predict(x)[0], svr_lin.predict(x)[0], svr_poly.predict(x)[0]
+	return svr_rbf.predict(np.array(x).reshape(-1,1))[0], svr_lin.predict(np.array(x).reshape(-1,1))[0], svr_poly.predict(np.array(x).reshape(-1,1))[0]
 
 get_data('goog.csv') # calling get_data method by passing the csv file to it
 print("Dates- ", dates)
