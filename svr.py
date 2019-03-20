@@ -19,8 +19,8 @@ def predict_price(dates, prices, x):
 	dates = np.reshape(dates,(len(dates), 1)) # converting to matrix of n X 1
 
 	svr_rbf = SVR(kernel= 'rbf', C= 1e3, gamma= 0.1) # defining the support vector regression models
-	svr_lin = SVR(kernel= 'linear', C= 1e3)
-	svr_poly = SVR(kernel= 'poly', C= 1e3, degree= 2)
+	svr_lin = SVR(kernel= 'linear', C= 1e3, gamma = 'auto')
+	svr_poly = SVR(kernel= 'poly', C= 1e3, degree= 2, gamma = 'auto')
 	svr_rbf.fit(dates, prices) # fitting the data points in the models
 	svr_lin.fit(dates, prices)
 	svr_poly.fit(dates, prices)
